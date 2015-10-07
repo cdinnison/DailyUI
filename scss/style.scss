@@ -6,3 +6,20 @@ html, body {
   overflow-x: hidden;
 }
 
+body {
+     margin: 100px;
+     min-height: 500px;
+     border: 2px solid #0026FF;
+}
+
+.center-align {
+     text-align: center;
+}
+
+.how-it-works {
+     ol {
+          width: 290px;
+          margin: 0 auto;
+     }
+}
+
