@@ -6,40 +6,94 @@
      <meta charset="utf-8">
      <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-     <title></title>
+     <title>Daily UI</title>
+     <meta name="description" content="Become a better designer in 100 days with daily prompts to improve your skills. Made by the dudes behind Noon Pacific">
 
-     <meta name="description" content="">
+     <!-- Twitter Card data -->
+     <meta name="twitter:card" content="Daily UI: Become a better designer in 100 days">
+     <meta name="twitter:site" content="@daily_ui">
+     <meta name="twitter:title" content="Daily UI">
+     <meta name="twitter:description" content="Become a better designer in 100 days.">
+     <meta name="twitter:creator" content="@daily_ui">
+     <meta name="twitter:image" content="http://www.example.com/image.jpg">
+
+     <!-- Open Graph data -->
+     <meta property="og:title" content="Daily UI" />
+     <meta property="og:type" content="product" />
+     <meta property="og:url" content="http://www.dailyui.co/" />
+     <meta property="og:image" content="http://dailyui.co/facebook.jpg" />
+     <meta property="og:description" content="Become a better designer in 100 days with daily prompts to improve your skills." /> 
+     <meta property="og:site_name" content="Daily UI" />
+
      <meta name="viewport" content="width=device-width, initial-scale=1">
 
+     <link href='favicon.png' rel='shortcut icon'>
      <link rel="stylesheet" href="css/style.css" />
+     <link href='https://fonts.googleapis.com/css?family=Playfair+Display:900,700|Work+Sans:400,500,600,700' rel='stylesheet' type='text/css'>
+
+     <script>
+       window.fbAsyncInit = function() {
+         FB.init({
+           appId      : '1035854499769169',
+           xfbml      : true,
+           version    : 'v2.4'
+         });
+       };
+
+       (function(d, s, id){
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) {return;}
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+     </script>
+     <script>ga('send', {
+       hitType: 'social',
+       socialNetwork: 'Facebook',
+       socialAction: 'like',
+       socialTarget: 'http://dailyui.co'
+     });
+     </script>
+
+     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+     </script>
+
+     <script>
+       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-68544953-1', 'auto');
+       ga('send', 'pageview');
+
+     </script>
 </head>
 
 <body>
+     <div id="fb-root"></div>
+
 
      <header>
-          <h1 class="center-align">Daily UI</h1>
-          <p class="center-align">Become a better designer in 100 days.</p>
+          <h1 class="center-align animated fadeIn">Daily UI</h1>
+          <p class="center-align animated fadeInUp">Become a better designer in 100 days.</p>
      </header>
 
      <section class="container">
 
 
-          <section class="email">
+          <section class="email-container">
                
                <div id="mc_embed_signup">
                     <form id="mc-form" action="//dailyui.us11.list-manage.com/subscribe/post?u=4f673bd669d38ddb22ebef774&amp;id=0ac3a8df35" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                          <div id="mc_embed_signup_scroll">
-                              <div class="mc-field-group">
-                                   <label for="mce-EMAIL">Email Address </label>
-                                   <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-                              </div>
-                              <div id="mce-responses" class="clear">
-                                   <div class="response" id="mce-error-response" style="display:none"></div>
-                                   <div class="response" id="mce-success-response" style="display:none"></div>
-                              </div>    
+                              <input type="email" value="" placeholder="email@address.com" name="EMAIL" class="required email animated fadeIn" id="mce-EMAIL">
+                              <input type="submit" value name="subscribe" id="mc-embedded-subscribe" class="subscribe animated zoomIn">
+                              <label for="mce-EMAIL"></label>
+
                               <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                               <div style="position: absolute; left: -5000px;"><input type="text" name="b_4f673bd669d38ddb22ebef774_0ac3a8df35" tabindex="-1" value=""></div>
-                              <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
                          </div>
                     </form>
                </div>
@@ -48,17 +102,22 @@
 
 
           <section class="how-it-works">
-               <p class="center-align">How It Works:</p>
-               <ol>
-                    <li>We send you a prompt daily (M-F)</li>
-                    <li>You interpret and create your design</li>
-                    <li>Share your design on Dribbble with #dailyui</li>
+               <p class="center-align bold">How It Works:</p>
+               <ol class="steps">
+                    <li class="animated fadeInUp">We send you a daily prompt (M-F) for 100 days</li>
+                    <li class="animated fadeInUp">You interpret and design the UI element</li>
+                    <li class="animated fadeInUp">Share design on <a href="http://www.dribbble.com" target="_blank">Dribbble</a> or <a href="http://www.twitter.com" target="_blank">Twitter</a> with #dailyui</li>
+                    <li class="animated fadeInUp">Get feedback from others and improve your skills</li>
                <ol>
           </section>
      </section>
 
      <footer>
-          <p class="center-align">Made by the dudes behind <a href="http://www.noonpacific.com">Noon Pacific</a></p>
+          <p class="center-align animated fadeIn">Made by the dudes behind <a href="http://www.noonpacific.com" target="_blank">Noon Pacific</a>. Inspired by <a href="http://www.100daysui.com/" target="_blank">Paul Nechita</a>.</p>
+          <div class="social">
+               <div class="fb-like animated fadeIn" data-href="http://dailyui.co" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+               <a href="https://twitter.com/share" class="twitter-share-button animated fadeIn" data-url="http://dailyui.co" data-text="Subscribe to Daily UI to become a better designer in 100 days" data-via="Daily_UI" data-hashtags="dailyui">Tweet</a>
+          </div>
      </footer>
 
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

@@ -31,7 +31,7 @@ For e.g. 'http://blahblah.us1.list-manage.com/subscribe/post-json?u=5afsdhfuhdsi
     $.ajaxChimp = {
         responses: {
             'We have sent you a confirmation email'                                             : 0,
-            'Please enter a value'                                                              : 1,
+            'Email address cannot be blank'                                                     : 1,
             'An email address must contain a single @'                                          : 2,
             'The domain portion of the email address is invalid (the portion after the @: )'    : 3,
             'The username portion of the email address is invalid (the portion before the @: )' : 4,
@@ -50,6 +50,7 @@ For e.g. 'http://blahblah.us1.list-manage.com/subscribe/post-json?u=5afsdhfuhdsi
             var form = $(elem);
             var email = form.find('input[type=email]');
             var label = form.find('label[for=' + email.attr('id') + ']');
+            var body = $('body');
 
             var settings = $.extend({
                 'url': form.attr('action'),
@@ -68,9 +69,11 @@ For e.g. 'http://blahblah.us1.list-manage.com/subscribe/post-json?u=5afsdhfuhdsi
                         msg = 'We have sent you a confirmation email';
                         label.removeClass('error').addClass('valid');
                         email.removeClass('error').addClass('valid');
+                        body.removeClass('error-bg').addClass('valid-bg');
                     } else {
                         email.removeClass('valid').addClass('error');
                         label.removeClass('valid').addClass('error');
+                        body.removeClass('valid-bg').addClass('error-bg');
                         var index = -1;
                         try {
                             var parts = resp.msg.split(' - ', 2);
